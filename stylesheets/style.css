@@ -166,10 +166,7 @@ a:hover {
     padding-right: 300px; }
     .main .inner .inner-main {
       position: relative;
-      width: 100%;
-      height: calc(100vh - 260px);
-      border-radius: 8px;
-      overflow: hidden; }
+      width: 100%; }
 
 /* 边栏 */
 .sidebar {
@@ -184,7 +181,7 @@ a:hover {
     border-radius: 8px;
     margin-bottom: 20px;
     width: 100%;
-    max-height: calc(100vh - 325px);
+    max-height: calc(100vh - 120px);
     overflow-y: scroll;
     padding: 20px; }
     .sidebar .widget .widget-wrap:first-child {
