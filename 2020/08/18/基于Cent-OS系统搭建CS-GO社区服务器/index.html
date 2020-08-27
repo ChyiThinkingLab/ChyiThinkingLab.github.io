@@ -103,7 +103,7 @@
       <section class="inner">
         <section class="inner-main">
           <div class="post">
-    <article id="post-cke2dqxdr0000iku54hcob1md" class="article article-type-post" itemscope
+    <article id="post-ckecqhjki0000kou591w31e1p" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -147,9 +147,18 @@ cd home/steam/      // 切换到steam目录</code></pre>
 <p>[ls]可以查看当前目录的内容 [cd..]可以跳转到上一目录 [cd 文件夹名]可以打开文件夹</p>
 <h3 id="安装steamcmd"><a href="#安装steamcmd" class="headerlink" title="安装steamcmd"></a>安装steamcmd</h3><pre><code class="bash">mkdir steamcmd      // 创建steamcmd文件夹
 cd steamcmd/        // 切换到steamcmd目录
-wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz    //下载steamcmd
+wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz    // 下载steamcmd
 tar zxvf steamcmd_linux.tar.gz    // 解压
-rm steamcmd_linux.tar.gz    //删除压缩包</code></pre>
+rm steamcmd_linux.tar.gz    // 删除压缩包</code></pre>
+<h3 id="安装steamcmd运行所需要的工具和依赖库"><a href="#安装steamcmd运行所需要的工具和依赖库" class="headerlink" title="安装steamcmd运行所需要的工具和依赖库"></a>安装steamcmd运行所需要的工具和依赖库</h3><pre><code class="bash">sudo yum install glibc.i686
+yum update libstdc++-4.8.5-11.el7.x86_64
+yum install libstdc++.i686
+./steamcmd.sh</code></pre>
+<p>出现”OK”表示安装完成</p>
+<h3 id="在steamcmd目录中安装csgo服务端"><a href="#在steamcmd目录中安装csgo服务端" class="headerlink" title="在steamcmd目录中安装csgo服务端"></a>在steamcmd目录中安装csgo服务端</h3><pre><code class="bash">login anonymous     // 匿名登录steamcmd
+force_install_dir ./csgo        // 创建CS:GO服务端安装文件夹
+app_update 740 validate         // 安装CS:GO服务端</code></pre>
+<p>出现”Success! App ‘740’ fully installed.”表示安装完成<br>输入”quit”退出</p>
 
         </div>
 
