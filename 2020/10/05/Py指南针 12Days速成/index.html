@@ -318,7 +318,69 @@ print(dic2)</code></pre>
 <h4 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h4><h5 id="函数名"><a href="#函数名" class="headerlink" title="函数名()"></a>函数名()</h5><h4 id="函数名的命名规范"><a href="#函数名的命名规范" class="headerlink" title="函数名的命名规范"></a>函数名的命名规范</h4><h5 id="由字母、数字、下划线组成，且数字不能开头"><a href="#由字母、数字、下划线组成，且数字不能开头" class="headerlink" title="由字母、数字、下划线组成，且数字不能开头"></a>由字母、数字、下划线组成，且数字不能开头</h5><h5 id="见名知意"><a href="#见名知意" class="headerlink" title="见名知意"></a>见名知意</h5><h5 id="不能使用关键字"><a href="#不能使用关键字" class="headerlink" title="不能使用关键字"></a>不能使用关键字</h5><h5 id="函数要先定义，再调用"><a href="#函数要先定义，再调用" class="headerlink" title="函数要先定义，再调用"></a>函数要先定义，再调用</h5><h5 id="函数可多次调用"><a href="#函数可多次调用" class="headerlink" title="函数可多次调用"></a>函数可多次调用</h5><h4 id="多个返回值"><a href="#多个返回值" class="headerlink" title="多个返回值"></a>多个返回值</h4><pre><code class="python">def 函数名(参数):
     代码块
     return 值1, 值2...</code></pre>
-<h4 id="return"><a href="#return" class="headerlink" title="return"></a>return</h4><h5 id="返回内容，返回值"><a href="#返回内容，返回值" class="headerlink" title="返回内容，返回值"></a>返回内容，返回值</h5><h5 id="结束此方法，return后一般不写代码"><a href="#结束此方法，return后一般不写代码" class="headerlink" title="结束此方法，return后一般不写代码"></a>结束此方法，return后一般不写代码</h5><h4 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h4><h5 id="·与参数的位置是没有关系的"><a href="#·与参数的位置是没有关系的" class="headerlink" title="·与参数的位置是没有关系的"></a>·与参数的位置是没有关系的</h5><h4 id="位置参数和关键字参数同时存在"><a href="#位置参数和关键字参数同时存在" class="headerlink" title="位置参数和关键字参数同时存在"></a>位置参数和关键字参数同时存在</h4><h5 id="·位置参数必须在关键字参数的前面"><a href="#·位置参数必须在关键字参数的前面" class="headerlink" title="·位置参数必须在关键字参数的前面"></a>·位置参数必须在关键字参数的前面</h5><h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><h5 id="·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值"><a href="#·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值" class="headerlink" title="·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值"></a>·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值</h5><h5 id="·如果给默认参数传递实参，默认参数的值会被覆盖掉"><a href="#·如果给默认参数传递实参，默认参数的值会被覆盖掉" class="headerlink" title="·如果给默认参数传递实参，默认参数的值会被覆盖掉"></a>·如果给默认参数传递实参，默认参数的值会被覆盖掉</h5><h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><h5 id="可变类型的参数-能处理比盛名更多的参数，会将传入的参数以元组的形式编程"><a href="#可变类型的参数-能处理比盛名更多的参数，会将传入的参数以元组的形式编程" class="headerlink" title="可变类型的参数 能处理比盛名更多的参数，会将传入的参数以元组的形式编程"></a>可变类型的参数 能处理比盛名更多的参数，会将传入的参数以元组的形式编程</h5><h5 id="agrs"><a href="#agrs" class="headerlink" title="**agrs"></a>**agrs</h5><h5 id="kwargs"><a href="#kwargs" class="headerlink" title="**kwargs"></a>**kwargs</h5><h3 id="函数的嵌套"><a href="#函数的嵌套" class="headerlink" title="函数的嵌套"></a>函数的嵌套</h3><h3 id="闭包函数"><a href="#闭包函数" class="headerlink" title="闭包函数"></a>闭包函数</h3><h4 id="定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数"><a href="#定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数" class="headerlink" title="定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数"></a>定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数</h4><h4 id="Python中怎样去创建一个闭包函数："><a href="#Python中怎样去创建一个闭包函数：" class="headerlink" title="Python中怎样去创建一个闭包函数："></a>Python中怎样去创建一个闭包函数：</h4><h5 id="闭包函数必须有内嵌函数"><a href="#闭包函数必须有内嵌函数" class="headerlink" title="闭包函数必须有内嵌函数"></a>闭包函数必须有内嵌函数</h5><h5 id="闭包函数必须引用上一层、上一级"><a href="#闭包函数必须引用上一层、上一级" class="headerlink" title="闭包函数必须引用上一层、上一级"></a>闭包函数必须引用上一层、上一级</h5>
+<h4 id="return"><a href="#return" class="headerlink" title="return"></a>return</h4><h5 id="返回内容，返回值"><a href="#返回内容，返回值" class="headerlink" title="返回内容，返回值"></a>返回内容，返回值</h5><h5 id="结束此方法，return后一般不写代码"><a href="#结束此方法，return后一般不写代码" class="headerlink" title="结束此方法，return后一般不写代码"></a>结束此方法，return后一般不写代码</h5><h4 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h4><h5 id="·与参数的位置是没有关系的"><a href="#·与参数的位置是没有关系的" class="headerlink" title="·与参数的位置是没有关系的"></a>·与参数的位置是没有关系的</h5><h4 id="位置参数和关键字参数同时存在"><a href="#位置参数和关键字参数同时存在" class="headerlink" title="位置参数和关键字参数同时存在"></a>位置参数和关键字参数同时存在</h4><h5 id="·位置参数必须在关键字参数的前面"><a href="#·位置参数必须在关键字参数的前面" class="headerlink" title="·位置参数必须在关键字参数的前面"></a>·位置参数必须在关键字参数的前面</h5><h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><h5 id="·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值"><a href="#·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值" class="headerlink" title="·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值"></a>·在我们是定义参数的时候，给形参一个默认值，当我们在调用函数的时候，如果不给默认值赋值的，默认是使用默认值</h5><h5 id="·如果给默认参数传递实参，默认参数的值会被覆盖掉"><a href="#·如果给默认参数传递实参，默认参数的值会被覆盖掉" class="headerlink" title="·如果给默认参数传递实参，默认参数的值会被覆盖掉"></a>·如果给默认参数传递实参，默认参数的值会被覆盖掉</h5><h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><h5 id="可变类型的参数-能处理比盛名更多的参数，会将传入的参数以元组的形式编程"><a href="#可变类型的参数-能处理比盛名更多的参数，会将传入的参数以元组的形式编程" class="headerlink" title="可变类型的参数 能处理比盛名更多的参数，会将传入的参数以元组的形式编程"></a>可变类型的参数 能处理比盛名更多的参数，会将传入的参数以元组的形式编程</h5><h5 id="agrs"><a href="#agrs" class="headerlink" title="**agrs"></a>**agrs</h5><h5 id="kwargs"><a href="#kwargs" class="headerlink" title="**kwargs"></a>**kwargs</h5><h3 id="函数的嵌套"><a href="#函数的嵌套" class="headerlink" title="函数的嵌套"></a>函数的嵌套</h3><h3 id="闭包函数"><a href="#闭包函数" class="headerlink" title="闭包函数"></a>闭包函数</h3><h4 id="定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数"><a href="#定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数" class="headerlink" title="定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数"></a>定义：内部函数对外部作用域而非全局作用域对名字的引用，这样的内部函数被称为闭包函数</h4><h4 id="Python中怎样去创建一个闭包函数："><a href="#Python中怎样去创建一个闭包函数：" class="headerlink" title="Python中怎样去创建一个闭包函数："></a>Python中怎样去创建一个闭包函数：</h4><h5 id="闭包函数必须有内嵌函数"><a href="#闭包函数必须有内嵌函数" class="headerlink" title="闭包函数必须有内嵌函数"></a>闭包函数必须有内嵌函数</h5><h5 id="闭包函数必须引用上一层、上一级"><a href="#闭包函数必须引用上一层、上一级" class="headerlink" title="闭包函数必须引用上一层、上一级"></a>闭包函数必须引用上一层、上一级</h5><h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><h4 id="本质上就是一个闭包函数"><a href="#本质上就是一个闭包函数" class="headerlink" title="本质上就是一个闭包函数"></a>本质上就是一个闭包函数</h4><h4 id="定义一个装饰器"><a href="#定义一个装饰器" class="headerlink" title="定义一个装饰器"></a>定义一个装饰器</h4><pre><code class="python">def 装饰器名(func):
+    def wrapper(*args, **kwargs):
+        目标函数执行前，要添加的功能
+        ret = func()
+        目标函数执行后，要添加的功能
+        return ret
+    return wrapper</code></pre>
+<h4 id="作用：在不改变源代码的情况下，给程序添加一个新的功能。"><a href="#作用：在不改变源代码的情况下，给程序添加一个新的功能。" class="headerlink" title="作用：在不改变源代码的情况下，给程序添加一个新的功能。"></a>作用：在不改变源代码的情况下，给程序添加一个新的功能。</h4><h2 id="继承-Day06"><a href="#继承-Day06" class="headerlink" title="继承 Day06"></a>继承 Day06</h2><h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><h4 id="多继承"><a href="#多继承" class="headerlink" title="多继承"></a>多继承</h4><h5 id="·-定义：一个子类可以有多个父类，这就是多继承，并且子类拥有所用父类的熟悉和方法"><a href="#·-定义：一个子类可以有多个父类，这就是多继承，并且子类拥有所用父类的熟悉和方法" class="headerlink" title="· 定义：一个子类可以有多个父类，这就是多继承，并且子类拥有所用父类的熟悉和方法"></a>· 定义：一个子类可以有多个父类，这就是多继承，并且子类拥有所用父类的熟悉和方法</h5><h5 id="·-语法："><a href="#·-语法：" class="headerlink" title="· 语法："></a>· 语法：</h5><pre><code class="python">class A:
+    def test1(self):
+        print(&#39;A类里是test1&#39;)
+    def test2(self):
+        print(&#39;B类里是test2&#39;)
+
+class C:
+    def test3(self):
+        print(&#39;C类里是test3&#39;)
+
+class B(A, C):
+    def test(self):
+        print(&#39;B类里是test&#39;)
+
+# 实例化B的对象
+b = B()
+b.test()
+b.test1()
+b.test3()</code></pre>
+<h5 id="·-注意事项：如果子类和父类有相同的方法，会优先调用子类的方法"><a href="#·-注意事项：如果子类和父类有相同的方法，会优先调用子类的方法" class="headerlink" title="· 注意事项：如果子类和父类有相同的方法，会优先调用子类的方法"></a>· 注意事项：如果子类和父类有相同的方法，会优先调用子类的方法</h5><h5 id="·-小知识点："><a href="#·-小知识点：" class="headerlink" title="· 小知识点："></a>· 小知识点：</h5><ol>
+<li><p>在Python继承了object的类，都是新式类</p>
+</li>
+<li><p>在Python3+中，所有的类都是新式类</p>
+</li>
+<li><p>在Python2+中，继承了object的类是新式类，没有继承的是经典类</p>
+</li>
+<li><p>经典类目前在Python中的应用是没有的</p>
+</li>
+<li><p>Python2+中经典类是按照深度优先去查找，新式类是按照广度优先去查找</p>
+</li>
+<li><p>Python3+中所有的类都是按照广度优先查找</p>
+</li>
+</ol>
+<h3 id="魔术方法"><a href="#魔术方法" class="headerlink" title="魔术方法"></a>魔术方法</h3><h4 id="定义：在Python中类型具有特定的特殊功能的方法，在语法上表示为以下双下划线开头和双下划线结尾的形式，init-str"><a href="#定义：在Python中类型具有特定的特殊功能的方法，在语法上表示为以下双下划线开头和双下划线结尾的形式，init-str" class="headerlink" title="定义：在Python中类型具有特定的特殊功能的方法，在语法上表示为以下双下划线开头和双下划线结尾的形式，init()  str()"></a>定义：在Python中类型具有特定的特殊功能的方法，在语法上表示为<strong>以下双下划线开头</strong>和<strong>双下划线结尾</strong>的形式，<strong>init</strong>()  <strong>str</strong>()</h4><h4 id="构造魔术方法："><a href="#构造魔术方法：" class="headerlink" title="构造魔术方法："></a>构造魔术方法：</h4><h5 id="·-del"><a href="#·-del" class="headerlink" title="· del()"></a>· <strong>del</strong>()</h5><h5 id="销毁魔术方法："><a href="#销毁魔术方法：" class="headerlink" title="销毁魔术方法："></a>销毁魔术方法：</h5><ol>
+<li>当一个对象在内存中自动被销毁时，会自动执行；</li>
+<li>参数至少要接收一个self对象；</li>
+<li>没有返回值</li>
+</ol>
+<pre><code class="python">class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print(&#39;&amp;#123;&amp;#125;来了，它今年&amp;#123;&amp;#125;岁了&#39;.format(self.name, self.age))
+
+    def __del__(self):
+        print(&#39;&amp;#123;&amp;#125;走了&#39;.format(self.name))
+
+# 实例化对象
+cat = Cat(&#39;John&#39;,4)
+print(&#39;程序执行结束&#39;)
+
+cat1 = Cat(&#39;Jame&#39;,6)
+del cat1
+print(&#39;程序执行结束&#39;)</code></pre>
+<p><strong>repr</strong>()<br>改变对象字符串的显示<br>这个方法是<strong>str</strong>()的替代 </p>
+
         </div>
 
     </div>
