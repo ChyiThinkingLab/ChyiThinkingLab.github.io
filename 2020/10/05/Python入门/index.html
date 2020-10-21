@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>基于Cent OS系统搭建CS:GO社区服务器 | Mr.Chyi | official</title>
+    <title>Python入门 | Mr.Chyi | official</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     
@@ -103,7 +103,7 @@
       <section class="inner">
         <section class="inner-main">
           <div class="post">
-    <article id="post-ckfg89mzo0000isu5aevfcf8h" class="article article-type-post" itemscope
+    <article id="post-ckgiqclaz0000v0u564h5g4ex" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -115,7 +115,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      基于Cent OS系统搭建CS:GO社区服务器
+      Python入门
     </h1>
   
 
@@ -125,7 +125,7 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2020-08-18T05:44:49.000Z" itemprop="datePublished">2020-08-18</time>
+  <time datetime="2020-10-05T03:04:57.000Z" itemprop="datePublished">2020-10-05</time>
 </div>
 
             
@@ -140,28 +140,11 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>云服务器（必须）：<br>本教程选用阿里云学生专享轻量应用服务器（包括5M峰值带宽、40GB SSD云盘、1000G流量包）安装CentOS 7.3系统作为服务器运行环境。</p>
-<p><a target="_blank" rel="noopener" href="https://www.netsarang.com/zh/xshell/" title="Xshell 7">Xshell 7</a>（可选）</p>
-<p><a target="_blank" rel="noopener" href="https://winscp.net/eng/download.php" title="WinSCP">WinSCP</a>（可选）：<br>Windows环境下的SSH的开源图形化SFTP客户端，同时支持SCP协议，在本地与远程计算机间安全地复制文件，并且可以直接编辑文件。</p>
-<h2 id="安装CS-GO服务器"><a href="#安装CS-GO服务器" class="headerlink" title="安装CS:GO服务器"></a>安装CS:GO服务器</h2><h3 id="以Root身份创建用户"><a href="#以Root身份创建用户" class="headerlink" title="以Root身份创建用户"></a>以Root身份创建用户</h3><pre><code class="bash">useradd -m steam    // 添加名为steam的用户
-passwd steam        // 为steam设置密码
-cd home/steam/      // 切换到steam目录</code></pre>
-<p>[ls]可以查看当前目录的内容 [cd..]可以跳转到上一目录 [cd 文件夹名]可以打开文件夹</p>
-<h3 id="安装steamcmd"><a href="#安装steamcmd" class="headerlink" title="安装steamcmd"></a>安装steamcmd</h3><pre><code class="bash">mkdir steamcmd      // 创建steamcmd文件夹
-cd steamcmd/        // 切换到steamcmd目录
-wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz    // 下载steamcmd
-tar zxvf steamcmd_linux.tar.gz    // 解压
-rm steamcmd_linux.tar.gz    // 删除压缩包</code></pre>
-<h3 id="安装steamcmd运行所需要的工具和依赖库"><a href="#安装steamcmd运行所需要的工具和依赖库" class="headerlink" title="安装steamcmd运行所需要的工具和依赖库"></a>安装steamcmd运行所需要的工具和依赖库</h3><pre><code class="bash">sudo yum install glibc.i686
-yum update libstdc++-4.8.5-11.el7.x86_64
-yum install libstdc++.i686
-./steamcmd.sh</code></pre>
-<p>出现”OK”表示安装完成</p>
-<h3 id="在steamcmd目录中安装csgo服务端"><a href="#在steamcmd目录中安装csgo服务端" class="headerlink" title="在steamcmd目录中安装csgo服务端"></a>在steamcmd目录中安装csgo服务端</h3><pre><code class="bash">login anonymous     // 匿名登录steamcmd
-force_install_dir ./csgo        // 创建CS:GO服务端安装文件夹
-app_update 740 validate         // 安装CS:GO服务端</code></pre>
-<p>出现”Success! App ‘740’ fully installed.”表示安装完成<br>输入”quit”退出</p>
-
+            <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h3 id="变量的操作"><a href="#变量的操作" class="headerlink" title="变量的操作"></a>变量的操作</h3><h4 id="一般"><a href="#一般" class="headerlink" title="一般"></a>一般</h4><pre><code class="bash"></code></pre>
+<h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3><h4 id="字符串转化为"><a href="#字符串转化为" class="headerlink" title="字符串转化为"></a>字符串转化为</h4><h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h4><pre><code class="bash">+、-、*、/、//、%、**</code></pre>
+<h4 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h4><h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><pre><code class="bash">=</code></pre>
+<h4 id="复合赋值运算符"><a href="#复合赋值运算符" class="headerlink" title="复合赋值运算符"></a>复合赋值运算符</h4><pre><code class="bash">+=、-=、*=、/=、//=、%=</code></pre>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4>
         </div>
 
     </div>
@@ -185,19 +168,19 @@ app_update 740 validate         // 安装CS:GO服务端</code></pre>
     
 <nav class="article-nav">
   
-    <a href="/2020/09/24/%E7%BA%AA%E5%BF%B5%E6%9F%90%E4%B8%AA%E5%8D%97%E4%BA%AC%E5%B8%82%E6%B0%91Mr-Lee/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/05/Py%E6%8C%87%E5%8D%97%E9%92%88%2012Days%E9%80%9F%E6%88%90/" id="article-nav-newer" class="article-nav-link-wrap">
       <div class="article-nav-caption">下一篇</div>
       <div class="article-nav-title">
         
-          纪念某个南京市民Mr.Lee
+          【更新】Py指南针
         
       </div>
     </a>
   
   
-    <a href="/2020/08/11/%E9%BD%90%E9%9B%84%E4%BC%9F/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/09/24/%E5%B9%B4%E8%BD%BB%E7%9A%84%E5%A4%A7%E8%89%BA%E6%9C%AF%E5%AE%B6/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">关于</div>
+      <div class="article-nav-title">年轻的大艺术家</div>
     </a>
   
 </nav>
@@ -206,15 +189,15 @@ app_update 740 validate         // 安装CS:GO服务端</code></pre>
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=基于Cent OS系统搭建CS:GO社区服务器 - Mr.Chyi | official&url=http://mrchyi.top/2020/08/18/%E5%9F%BA%E4%BA%8ECent-OS%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BACS-GO%E7%A4%BE%E5%8C%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+            href="https://twitter.com/share?text=Python入门 - Mr.Chyi | official&url=http://mrchyi.top/2020/10/05/Python%E5%85%A5%E9%97%A8/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=基于Cent OS系统搭建CS:GO社区服务器 - Mr.Chyi | official&u=http://mrchyi.top/2020/08/18/%E5%9F%BA%E4%BA%8ECent-OS%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BACS-GO%E7%A4%BE%E5%8C%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+            href="https://www.facebook.com/sharer.php?title=Python入门 - Mr.Chyi | official&u=http://mrchyi.top/2020/10/05/Python%E5%85%A5%E9%97%A8/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=基于Cent OS系统搭建CS:GO社区服务器 - Mr.Chyi | official&url=http://mrchyi.top/2020/08/18/%E5%9F%BA%E4%BA%8ECent-OS%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BACS-GO%E7%A4%BE%E5%8C%BA%E6%9C%8D%E5%8A%A1%E5%99%A8/&pic=">
+            href="https://service.weibo.com/share/share.php?title=Python入门 - Mr.Chyi | official&url=http://mrchyi.top/2020/10/05/Python%E5%85%A5%E9%97%A8/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
