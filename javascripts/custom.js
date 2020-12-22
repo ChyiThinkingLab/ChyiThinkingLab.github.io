@@ -129,9 +129,112 @@ import { addNewClass, removeClass, throttle } from './class-module'
     )
 
     // Perfect Scrollbar
-    const widget = document.querySelector('#widget')
-    // const inner = document.querySelector('.inner-main')
-    // const psBody = new PerfectScrollbar(inner)
-    const ps = new PerfectScrollbar(widget)
-    console.log(ps)
+    const _widget = document.querySelector('#widget')
+    const widget = new PerfectScrollbar(_widget)
+
+    // Typed
+    if (window.aomori_logo_typed_animated) {
+        const typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            fadeOut: true,
+            fadeOutDelay: 800,
+            typeSpeed: 100,
+            showCursor: false,
+        })
+    }
+
+    // Algolia
+    if (window.aomori_search_algolia) {
+        const _searchPs = document.querySelector('#search-ps')
+        const searchPs = new PerfectScrollbar(_searchPs)
+
+        const algoliaConfig = document.querySelector(
+            'meta[property="algolia:search"]'
+        ).dataset
+
+        const algoliaClient = algoliasearch(
+            algoliaConfig.applicationId,
+            algoliaConfig.apiKey
+        )
+        const algoliaIndex = algoliaClient.initIndex(algoliaConfig.indexName)
+
+        $('#search').on(
+            'keyup',
+            throttle((event) => {
+                algoliaIndex.search($('#search').val()).then(({ hits }) => {
+                    $('.search-result').slideDown()
+
+                    if (hits.length) {
+                        let searchOutputHtml = ''
+                        hits.forEach((item) => {
+                            searchOutputHtml += `<a class="search-result-item" href="${
+                                item.permalink
+                            }"><h1>${item.title}</h1><p>${dayjs(
+                                item.date
+                            ).format('YYYY-MM-DD')}</p></a>`
+                        })
+                        $('.search-result').html(searchOutputHtml)
+                    } else {
+                        $('.search-result').html('Nothing at all.')
+                    }
+                })
+            })
+        )
+        $('#search').on('focusin', () => {
+            addNewClass($('.search'), 'search-focus')
+        })
+        $('#search').on('focusout', () => {
+            removeClass($('.search'), 'search-focus')
+            $('.search-result').slideUp()
+        })
+    }
+
+    // Swiper
+    const mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 10000,
+        },
+        autoHeight: true,
+        pagination: {
+            el: '.swiper-pagination',
+            bulletActiveClass: 'article-gallery-active',
+        },
+    })
+    if (mySwiper.slides && mySwiper.slides.length <= 1) {
+        mySwiper.destroy()
+    }
+
+    // Viewer
+    const viewerConfig = {
+        title: false,
+        toolbar: {
+            zoomIn: true,
+            zoomOut: true,
+            reset: true,
+            prev: true,
+            next: true,
+        },
+        keyboard: false,
+    }
+    const galleryViewer = $('.article-gallery')
+    if (galleryViewer && galleryViewer.length > 0) {
+        galleryViewer.viewer(viewerConfig)
+    }
+    const articleEntryViewer = $('.article-entry')
+    if (articleEntryViewer && articleEntryViewer.length > 0) {
+        articleEntryViewer.viewer(viewerConfig)
+    }
+
+    // Plyr
+    if (window.isPost) {
+        const plyrsInPost = Array.from($('article video')).map(
+            (ele) => new Plyr(ele)
+        )
+    }
+    const plyrsInIndex = Array.from($('article .article-video-plyr')).map(
+        (ele) => new Plyr(ele)
+    )
+
+    // LazyLoad
+    const lazyLoad = new LazyLoad()
 })()
