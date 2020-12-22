@@ -14,6 +14,8 @@
     
 
     
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    
 
     
 <link rel="stylesheet" href="/dist/build.css?v=1.13.0.css">
@@ -23,8 +25,18 @@
         window.isPost = true
         window.aomori = {
             
+            gitalk: {
+                enable: true,
+                clientID: "GitHub Application Client ID",
+                clientSecret: "GitHub Application Client Secret",
+                repo: "GitHub repo",
+                owner: "GitHub repo owner",
+                admin: ["GitHub repo owner and collaborators","GitHub repo owner and collaborators",],
+                distractionFreeMode: true // Facebook-like distraction free mode  // Facebook-like distraction free mode
+            },
+            
         }
-        window.aomori_logo_typed_animated = false
+        window.aomori_logo_typed_animated = true
         window.aomori_search_algolia = false
     </script>
 
@@ -42,7 +54,10 @@
             
             <div class="header-type-inner">
                 
-                    <a class="header-type-title" href="/">Mr.Chyi | official</a>
+                    <div id="typed-strings" style="display:none">
+                        <p>Mr.Chyi | official</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
                 
     
                 
@@ -239,6 +254,10 @@ app_update 740 validate         // 安装CS:GO服务端</code></pre>
 
 
 
+<section class="comments">
+    <div id="gitalk-container"></div>
+</section>
+
 
 
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -332,6 +351,8 @@ app_update 740 validate         // 安装CS:GO服务端</code></pre>
 
 </footer>
 
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 
 
